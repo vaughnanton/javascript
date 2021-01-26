@@ -6,6 +6,7 @@ class SearchBar extends React.Component {
     onFormSubmit = event => {
         event.preventDefault();
         // this is the onSubmit function from the App we're calling back with user input
+        // a reference to the function that got passed from attribute in the <SearchBar />
         this.props.onSubmit(this.state.term);
     }
 
