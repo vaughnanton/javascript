@@ -1,18 +1,22 @@
 import React from 'react';
-import axios from 'axios'; 
+import unsplash from '../api/unsplash'; 
 import SearchBar from './SearchBar';
 
 class App extends React.Component {
-    onSearchSubmit(term) {
+    state = { images: [] };
+    // async goes in front of method name, await goes before whatever is causing wait, set it to variable
+    onSearchSubmit = async term => {
         // api get request
-        axios.get('https://api.unsplash.com/search/photos', {
+        const response = await unsplash.get('/search/photos', {
             params: {
                 query: term
-            },
-            headers: {
-                Authorization: 'Client-ID K-SKeoobwW5XYe3r31i1nxSmXASWJzugcS4WE-J9JeA'
             }
-        });
+        })
+        // can use async await instead of below
+        // .then((response) => {
+        //     console.log(response.data.results)
+        // });
+        this.setState({ images: response.data.results });
     }
 
     render() {
@@ -20,6 +24,7 @@ class App extends React.Component {
             <div className="ui container" style={{marginTop: '10px'}}>
             {/* onSubmit below can be called anything */}
             <SearchBar onSubmit={this.onSearchSubmit} />
+            Found: {this.state.images.length} images
         </div>
         );
     }
