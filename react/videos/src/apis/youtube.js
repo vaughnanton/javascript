@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const KEY = 'AIzaSyCu3RFeCUAgozS4M5Z-gksgd8uc4_WRW0g';
+const KEY = '';
 
 // preconfigure axios query to youtube api
 export default axios.create({
