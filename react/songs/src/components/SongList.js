@@ -22,7 +22,6 @@ class SongList extends React.Component {
     }
 
     render() {
-        console.log(this.props)
         // this.props is equal to { songs: state.songs } from mapStateToProps
         return <div className="ui divided list">{this.renderList()}</div>;
     }
