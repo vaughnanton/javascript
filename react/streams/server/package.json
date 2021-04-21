@@ -1,0 +1,15 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "comment-for-start": "start json server on port 3001 and watch db.json file",
+    "start": "json-server -p 3001 -w db.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.16.3"
+  }
+}
