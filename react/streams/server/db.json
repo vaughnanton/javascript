@@ -4,6 +4,22 @@
       "title": "my stream ",
       "description": "this is aiwoeotwet",
       "id": 1
+    },
+    {
+      "title": "Vahagsy",
+      "description": "Created this stream",
+      "id": 2
+    },
+    {
+      "title": "test",
+      "description": "did we get a user id",
+      "id": 3
+    },
+    {
+      "title": "Red",
+      "description": "Red like clifford the big red dog",
+      "userId": "102528536481930802299",
+      "id": 4
     }
   ]
 }
